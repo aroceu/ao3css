@@ -549,6 +549,10 @@ img{
     :root {
         --width: 95vw;
     }
+
+    *, html{
+        -webkit-text-size-adjust: none;
+    }
     #preface, #chapters, #afterword {
         width: 100%;
         padding-left: 1em;
@@ -571,6 +575,10 @@ img{
 }
 
 @media (max-width: 600px) {
+
+    *, html{
+        -webkit-text-size-adjust: none;
+    }
 
     html, body {
         font-size: 0.95em;
