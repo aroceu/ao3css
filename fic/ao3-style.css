@@ -541,6 +541,10 @@ blockquote.userstuff{
     padding-bottom: 0;
 }
 
+img{
+    max-width: 100%;
+}
+
 @media (max-width: 900px) {
     :root {
         --width: 95vw;
