@@ -23,9 +23,9 @@ can steal my code instead of yours P:
     --title-size: 2.5em;
     --width: 60em;
     --border-size: 2px;
-    --border-style: solid;
-    --link-border-style: dotted;
-    --hr-border-style: dotted;
+    --border-style: solid; /** solid, dotted, dashed, double, hidden, none. cannot be wavy **/
+    --link-border-style: dotted; /** solid, dotted, dashed, double, wavy, none **/
+    --hr-border-style: dotted; /** solid, dotted, dashed, double, hidden, none. cannot be wavy **/
 }
 
 * {
