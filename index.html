@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- :3 -->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0" />
+
+        <link rel="icon" type="image/png" href="../favicon.png" />
+        <link rel="stylesheet" href="../style.css" />
+		
+		<title>fan @ ao3.css</title>
+
+        <style type="text/css">
+            @media (max-width: 900px) {
+                main {
+                    padding: 0;
+                    width: 95%!important;
+                }
+                #blurb, #footer {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                h1 {
+                    font-size: 2em;
+                }
+                ul, ol {
+                    padding-left: 1.2em;
+                }
+                pre {
+                    font-size: 0.95em;
+                    overflow-x: auto;
+                }
+                aside {
+                    font-size: 0.95em;
+                    padding: 0.5em;
+                    margin: 1em 0;
+                }
+            }
+
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 1.5em;
+                }
+                main {
+                    padding: 0.5em;
+                }
+                pre {
+                    font-size: 0.9em;
+                }
+                #footer p {
+                    font-size: 0.95em;
+                }
+            }
+        </style>
+
+	</head>
+	<body>
+
+		<main>
+			
+            <h1>ao3-style.css</h1>
+
+            <div id="blurb">
+
+                <details><summary><question>What is this?</question></summary>
+
+                <p>A pre-written stylesheet for fics from AO3 directly downloaded as <code>.html</code> files.</p>
+
+                <p>Previews:</p>
+
+                <ul>
+                    <li><a href="fic/sample.html">Sample Fic</a></li>
+                    <li><a href="fic/sample-alternate.html">Alternative Sample</a></li>
+                    <li><a href="fic/sample-short.html">Short Sample</a></li>
+                    <li><a href="fic/sample-chaptered.html">Chaptered Sample ("Entire Work")</a></li>
+
+                </ul></details>
+
+                <details><summary><question>Who is this for?</question></summary>
+
+                <p>Fanfiction writers who would like to upload their fanfiction that they've already uploaded to AO3
+                    to an independent website, such as ones hosted by <a href="https://neocities.org">Neocities</a>,
+                    <a href="https://nekoweb.org">Nekoweb</a>, or <a href="https://teacake.org/">Teacake</a>. 
+                </p>
+
+                <p>Though AO3 conveniently has your fic converted from webpage to a viewable <code>.html</code>
+                file, it's not exactly the prettiest. Or most readable, depending on who you are. <small>(See 
+                <a href="https://aroceu.neocities.org/thats_the_way_it_is">this page</a> as an example.)</small> For writers who 
+                are concerned with such things (such as myself), this stylesheet is an easy and quick solution to
+                that while also making the backup of your fanfiction on your own site styled to <em>your</em>
+                personal tastes.</p>
+                </details>
+
+                <details><summary><question>How can I use it?</question></summary>
+
+                <ol>
+                    <li>Select all + copy <a href="fic/ao3-style.css">fic/ao3-style.css</a> and paste it into your own <code>ao3-style.css</code> 
+                    file. Alternatively, you can download the page as-is.</li>
+                    <li>Download your fics from AO3 in HTML format. Put them in the same folder as <code>ao3-style.css</code></li>
+                        <ul>
+                            <li>This can be done by going to: <em><a href="">AO3 Fic Page</a> &gt; Download &gt; HTML</em>, or</li>
+                            <li>Using the <a href="https://nianeyna.dev/ao3downloader">ao3downloader python script</a> made by nianeyna.</li>
+                            <aside><strong>Do my fics <em>have</em> to be in the same folder as <code>ao3-style.css</code>?</strong>
+                        <br />It would be easier for the purposes of this instruction, but it'll still work if you spread your fic
+                        across different folders, or put this stylesheet elsewhere. I won't go into it because it depends on your 
+                        specific and desired structure. To learn more, <a href="https://www.codecademy.com/resources/docs/html/file-paths">read about relative file paths</a>.
+                            </aside>
+                        </ul>
+                        
+                    <li>Open each fic <code>.html</code> file in your text editor. <small><em>(You don't have to do them all at once, but 
+                        you will need to repeat this step for all of them eventually.)</em></small><ol>
+                            <li>Copy this code:</li>
+                            <pre>
+&lt;link rel="stylesheet" href="ao3-style.css"&gt; &lt;!-- this adds the stylesheet --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; &lt;!-- this allows the stylesheet for mobile/tablets to work --&gt;</pre>
+                            <li>At the top of the <code>.html</code> file from line 7 to line 22, there should be this code:<pre>
+  &lt;style type="text/css"&gt;
+    p.message { text-align: center; }
+    .meta h1 { font-size: 1.5em; text-align: center; }
+    .meta h2 { font-size: 1.25em; text-align: center; }
+    .meta h2 { page-break-before: always; }
+    .meta .byline { text-align: center; }
+    .meta dl.tags { border: 1px solid; padding: 1em; }
+    .meta dd { margin: -1em 0 0 10em; }
+    .meta .endnote-link { font-size: .8em; }
+    /* List child related works under the labeling dt */
+    #afterword .meta dd { margin: 1em 0 0 1em; }
+    #chapters { font-family: "Nimbus Roman No9 L", "Times New Roman", serif; padding: 1em; }
+    .userstuff { font-family: "Nimbus Roman No9 L", "Times New Roman", serif; padding: 1em; }
+    /* Invisible headings to help Calibre make a Table of Contents */
+    .toc-heading { display: none; }
+  &lt;/style&gt;</pre></li>
+                            <li>Select it all, and <mark>replace it by pasting</mark> the code you copied earlier. Do this for all of your fic.
+                             </ol>
+                            </li>
+                            <li><strong>Now you can style!</strong> Open <code>ao3-style.css</code> in your text editor.</li>
+                            <li>Change everything in the <code>:root {}</code> brackets to your heart's content. 
+                                <ul>
+                                    <li>You will need to be familiar with <a href="https://www.color-hex.com/">hex color codes</a> and <a href="https://www.w3schools.com/css/css_font.asp">using fonts in CSS</a>, 
+                                        but everything else should be self-explanatory.</li>
+                                        <li>You can test your changes by opening any of your fic's  <code>.html</code> files in your web browser.</li>
+                                </ul></li>
+                            <li>Upload the folder containing your fic <code>.html</code> files as well as your <code>ao3-style.css</code> together 
+                            to your website. Then you're done!</li>
+                        </ol>
+                </ol>
+                </details>
+
+                <details><summary><question>What else should I check out?</question></summary>
+
+                <p>The stylesheet as well as the previews are available on <a href="">Github</a>.</p>
+
+                <p>You might be interested in the <a href="../masterlist/">masterlist template</a> I made. It's the only other thing on my <a href="../">index of fannish webpage templates</a>.</p>
+                </details>
+
+            </div>
+
+            <div id="footer">
+
+                <p>&hearts; 2025 A <a href="https://kingdra.net">kingdra.net</a> production </p>
+            </div>
+
+		</main>
+
+	</body>
+</html>

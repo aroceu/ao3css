@@ -1,0 +1,274 @@
+/** 
+Name: ao3-style.css
+Source: kingdra.net/fan
+Author: kingdra.net / aroceu
+Description: A stylesheet made for fics from AO3 downloaded as .html files.
+You don't have to keep the credit, but it'd be easier for others so they
+can steal my code instead of yours P:
+**/
+
+:root{
+    --background: #fff;
+    --text-color: #333;
+
+     /** 'Times New Roman', 'Verdana', google fonts also work here **/
+    --text-font: sans-serif;
+    --title-font: monospace;
+    --subtitle-font: sans-serif;
+    --message-font: monospace;
+
+    --accent: #16a9b8; /** main color **/
+    --accent-dark: #337378; /** link hover color**/
+    --accent-light: #aadadf;
+    --blockquote-background: #eee; /** background of when you use <blockquote> **/
+    --title-color: #16a9b8; /** fic title color, currently matches accent but doesn't have to **/
+
+    --title-size: 2.5em;
+    --width: 60em;
+    --border-size: 2px;
+    --border-style: solid; /** can be dotted, dashed, double, solid, hidden, none **/
+    --link-border-style: dotted;
+    --hr-border-style: dotted;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--background);
+}
+
+html, body{
+    font: normal 1em/160% var(--text-font);
+    color: var(--text-color);
+}
+
+#preface, #chapters, #afterword{
+    width: var(--width);
+    margin: 0 auto;
+}
+
+#chapters{
+    margin-top: 2em;
+    border-top: var(--border-size) var(--border-style) var(--accent);
+}
+
+.meta dl.tags {
+    border: var(--border-size) var(--border-style) var(--accent);
+    padding-top: 2em; 
+    padding-right: 2em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+}
+
+.meta dd {
+    margin: -1.6em 0 1em 10em;
+}
+
+p{
+    padding: 0.5em 0;
+}
+
+hr{
+    margin: 2em auto 1em;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: var(--border-size) var(--hr-border-style) var(--accent);
+    width: 75%;
+}
+
+ul, ol{
+    margin: 1em;
+}
+
+li{
+    padding-left: 1em;
+}
+
+li::marker{
+    color: var(--accent);
+}
+
+	a:link,
+	a:visited {
+		color: var(--accent);
+		-webkit-text-decoration-line: var(--link-border-style);
+		text-decoration: underline;
+		text-decoration-style: var(--link-border-style);
+		text-decoration-thickness: var(--border-size);
+		text-decoration-color: var(--accent);
+		-webkit-text-decoration-color: var(--accent);
+	}
+
+	a:hover,
+	a:active,
+	a:focus {
+		color: var(--accent-dark);
+		-webkit-text-decoration-line: var(--link-border-style);
+		text-decoration: underline;
+		text-decoration-style: var(--main-border-style);
+		text-decoration-thickness: var(--border-size);
+		text-decoration-color: var(--accent-dark);
+		-webkit-text-decoration-color: var(--accent-dark);
+		box-shadow: inset 0px -5px 0 0px var(--accent-light);
+	}
+
+blockquote.userstuff blockquote{
+    background: var(--blockquote-background);
+    border: none;
+}
+
+blockquote{
+    background: var(--blockquote-background);
+    padding: 1em;
+    margin: 0.5em auto 1em;
+}
+
+p.message { text-align: center; padding: 1em; font-family: var(--message-font)}
+
+.meta h1, .meta h2.heading { font-size: var(--title-size); text-align: center; margin: 1.5em auto 0.5em; color: var(--title-color); font-weight: normal;}
+
+.meta h1, .byline{
+    font-family: var(--title-font);
+}
+
+.meta p{
+    display: none;
+}
+
+#preface .meta p, .meta .userstuff p, .meta #endnotes p{
+    display: block;
+}
+
+.byline{
+    font-size: 120%;
+}
+
+.meta h2 { font-size: 1.25em; text-align: center; }
+
+.meta h2 { page-break-before: always; }
+
+.meta .byline { text-align: center; }
+
+.meta .endnote-link { font-size: 95%; font-family: var(--message-font); }
+
+#afterword{
+    margin: 2em auto;
+    border: var(--border-size) var(--border-style) var(--accent);
+}
+
+#afterword .meta{
+    padding: 2em 2em 0 2em;
+}
+
+#afterword .message{
+    padding: 2em 2em 2em 2em;
+}
+
+#endnotes p:first-child, #preface:first-child .meta p:nth-child(4), #preface:first-child .meta p:nth-child(6){
+    font-weight: bold;
+    color: var(--accent);
+    padding-bottom: 1em;
+    border-bottom: var(--border-size) var(--border-style) var(--accent);
+    font-family: var(--subtitle-font);
+    font-size: 120%;
+}
+
+#preface:first-child .meta .userstuff p:nth-child(4), #preface:first-child .meta .userstuff p:nth-child(6), #endnotes .userstuff p:first-child{
+    font-weight: inherit;
+    color: inherit;
+    border-bottom: none;
+    padding-bottom: inherit;
+    border-bottom: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.userstuff blockquote{
+    border-top: var(--border-size) var(--border-style) var(--accent);
+    border-bottom: var(--border-size) var(--border-style) var(--accent);
+    background: inherit;
+}
+
+blockquote.userstuff{
+    background: inherit;
+}
+
+    #afterword .meta dd { margin: 1em 0 0 1em; }
+    #chapters { padding: 1em; }
+    .userstuff { padding: 1em; }
+
+    .toc-heading { display: none; }
+
+    #endnotes1, #endnotes2, #endnotes3, #endnotes4, #endnotes5, #endnotes6, #endnotes7, #endnotes8, #endnotes9, #endnotes10,
+    #endnotes11, #endnotes12, #endnotes13, #endnotes14, #endnotes15, #endnotes16, #endnotes17, #endnotes18, #endnotes19, #endnotes20,
+    #endnotes21, #endnotes22, #endnotes23, #endnotes24, #endnotes25, #endnotes26, #endnotes27, #endnotes28, #endnotes29, #endnotes30,
+    #endnotes31, #endnotes32, #endnotes33, #endnotes34, #endnotes35, #endnotes36, #endnotes37, #endnotes38, #endnotes39, #endnotes40,
+    #endnotes41, #endnotes42, #endnotes43, #endnotes44, #endnotes45, #endnotes46, #endnotes47, #endnotes48, #endnotes49, #endnotes50 {
+        font-size: 0.9em;
+    }
+
+    spoiler{
+        color: var(--text-color);
+        background: var(--text-color);
+    }
+
+.meta #endnotes blockquote.userstuff{
+    padding-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    :root {
+        --width: 95vw;
+    }
+    #preface, #chapters, #afterword {
+        width: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .meta dl.tags {
+        padding: 1em;
+    }
+    #afterword .meta, #afterword .message {
+        padding: 1em;
+    }
+
+    #afterword{
+        border-top: var(--border-size) var(--border-style) var(--accent);
+                border-bottom: var(--border-size) var(--border-style) var(--accent);
+                border-left: none;
+                border-right: none;
+
+    }
+}
+
+@media (max-width: 600px) {
+
+    html, body {
+        font-size: 0.95em;
+    }
+    #preface, #chapters, #afterword {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    .meta dd {
+        margin-left: 0;
+    }
+    .meta dl.tags {
+        padding: 0.5em;
+    }
+    blockquote {
+        padding: 0.5em;
+    }
+    .userstuff {
+        padding: 0.5em;
+    }
+
+    .meta dd{
+        margin: 0 0 1em 0;
+    }
+}
