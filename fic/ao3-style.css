@@ -124,6 +124,7 @@ li{
     color: var(--title-color);
     font-weight: normal;
     font-family: var(--title-font);
+    line-height: 150%;
 }
 
 .byline {
