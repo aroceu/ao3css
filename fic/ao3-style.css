@@ -238,9 +238,7 @@ p.message {
     font-family: var(--message-font);
 }
 
-#endnotes p:first-child,
-#preface:first-child .meta p:nth-child(4),
-#preface:first-child .meta p:nth-child(6) {
+#endnotes p:first-child, #preface .meta p:nth-child(4), #preface .meta p:nth-child(6) {
     font-weight: bold;
     color: var(--accent);
     padding-bottom: 1em;
@@ -249,8 +247,8 @@ p.message {
     font-size: 120%;
 }
 
-#preface:first-child .meta .userstuff p:nth-child(4),
-#preface:first-child .meta .userstuff p:nth-child(6),
+#preface .meta .userstuff p:nth-child(4),
+#preface .meta .userstuff p:nth-child(6),
 #endnotes .userstuff p:first-child {
     font-weight: inherit;
     color: inherit;
