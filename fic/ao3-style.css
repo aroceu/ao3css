@@ -144,6 +144,10 @@ li{
     font-family: var(--message-font);
 }
 
+#preface .meta .endnote-link{
+    padding-top: 2em;
+}
+
 .meta p {
     display: none;
 }
