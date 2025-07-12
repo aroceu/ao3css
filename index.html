@@ -148,6 +148,27 @@
                             to your website. Then you're done!</li>
                         </ol>
                 </ol>
+
+                <aside><strong>Keep in mind!</strong>
+                    <ul>
+                        <li>Do not add additional HTML lines in the <code>&lt;div id="preface"&gt; ... &lt;div class="meta"&gt;</code> section.
+                        Formatting for the metadata labels (<em>Summary</em>, <em>Notes</em>) is dependent on the order of elements in this div,
+                        so adding new elements (or removing them) will mess this up.</li>
+                        <li>If you would like to use the same styling as your <a href="../masterlist">masterlist</a> or another webpage on your site,
+                        call both stylesheets on your fic page, instead of just ao3-style.css. You can do something like this:
+                    
+                        <pre>&lt;link rel="stylesheet" href="style.css"&gt; &lt;!-- this adds the masterlist stylesheet --&gt;
+&lt;link rel="stylesheet" href="ao3-style.css"&gt; &lt;!-- this adds the ao3 fic stylesheet --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt; &lt;!-- this allows the stylesheet for mobile/tablets to work --&gt;</pre>
+
+                        The last stylesheet that gets called always takes priority, which is why this code orders it second. The first stylesheet can be
+                        thought of as the default, while subsequent stylesheets can be thought of as specific customizations.
+                    </li>
+                    <li>Though I cannot offer 24/7 support for everyone, if you have any concerns about this code specifically, please feel free to
+                        <a href="https://aroceu.com">contact me</a> and I'll see what I can do to help :)
+                    </li>
+                    </ul>
+                </aside>
                 </details>
 
                 <details><summary><question>Can you show me some customization examples?</question></summary>
