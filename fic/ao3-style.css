@@ -112,6 +112,10 @@ li{
     margin: -1.6em 0 1em 10em;
 }
 
+#preface .meta .tags dd:nth-child(20){
+    word-spacing: 0.5em;
+}
+
 .meta h1,
 .meta h2.heading {
     font-size: var(--title-size);
@@ -307,6 +311,10 @@ p.message {
 #endnotes48,
 #endnotes49,
 #endnotes50 {
+    font-size: 0.9em;
+}
+
+.group blockquote.userstuff{
     font-size: 0.9em;
 }
 
