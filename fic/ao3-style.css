@@ -335,12 +335,13 @@ spoiler {
 
     *, html{
         -webkit-text-size-adjust: none;
+        line-height: 150%;
     }
 
     #preface,
     #chapters,
     #afterword {
-        width: 100%;
+        width: 95%;
         padding-left: 1em;
         padding-right: 1em;
     }
